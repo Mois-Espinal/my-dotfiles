@@ -1,0 +1,40 @@
+#!/bin/bash
+echo "the installation will require sudo acess"
+ask(){
+read -p "$1 (y/n)" response
+[ -z "$response"] || [ "$response" = "y"]
+}
+if ask "Do you wish to install?"; then
+sudo rm ~/.bashrc
+cp .bashrc ~
+cp .aliases ~
+cp .bash_profile ~
+cp .config ~
+cp .hushlogin ~
+cp .vimrc ~
+#installing vim-plug 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#installing dependencies and packages
+sudo pacman -S clang
+sudo pacman -S unzip
+sudo pacman -S zip
+sudo pacman -S ruby
+sudo pacman -S php
+sudo pacman -S python3
+sudo pacman -S gcc
+sudo pacman -S man-pages
+sudo pacman -S cpanminus
+sudo pacman -S npm
+sudo pacman -S docker
+sudo pacman -S ranger
+sudo pacman -S vim
+sudo pacman -S iputils
+sudo pacman -S net-tools
+sudo pacman -S wget
+sudo pacman -S iproute2
+sudo pacman -S iptables
+sudo pacman -S strace
+sudo pacman -S rubygems
+sudo pacman -S 
+fi
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+touch gruvbox.vim
+curl https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim > gruvbox.vim

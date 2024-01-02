@@ -1,0 +1,36 @@
+#!/bin/bash
+#conveniency
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+alias l="ls -lF --color"
+alias drive='cd /mnt/c/Users/zorai/Onedrive'
+alias clear-history='echo "" > ~/.bash_history '
+alias pacman="sudo pacman"
+alias open='explorer.exe'
+alias update='pacman -Syu'
+alias autoremove="pacman -Qtdq | pacman -Rns"
+# List all files colorized in long format, excluding . and ..
+alias la="ls -lAF --color"
+
+# List only directories
+alias lsd="ls -LAF --color | grep --color=never '01;34'"
+
+# Always use color output for `ls`
+alias ls="command ls --color"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+#networking tools
+alias localip="ifconfig | grep inet | awk '{print $2}' | sed -n 2,2p"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+#utilities
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias reload="exec ${SHELL}"
+alias untar='tar xvf'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
