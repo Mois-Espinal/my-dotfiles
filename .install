@@ -15,27 +15,34 @@ cp .vimrc ~
 sudo cp bin/perl-lsp /usr/local/bin
 #installing vim-plug 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#installing cpp man pages
+git clone https://aur.archlinux.org/libstdc++5.git
+cd libstdc++5
+sudo chmod +x PKGBUILD
+./PKGBUILD
+cd ..
+mv libstdc++5 /usr/local/lib
 #installing dependencies and packages
-sudo pacman -S clang
-sudo pacman -S unzip
-sudo pacman -S zip
-sudo pacman -S ruby
-sudo pacman -S php
-sudo pacman -S python3
-sudo pacman -S gcc
-sudo pacman -S man-pages
-sudo pacman -S cpanminus
-sudo pacman -S npm
-sudo pacman -S docker
-sudo pacman -S ranger
-sudo pacman -S vim
-sudo pacman -S iputils
-sudo pacman -S net-tools
-sudo pacman -S wget
-sudo pacman -S iproute2
-sudo pacman -S iptables
-sudo pacman -S strace
-sudo pacman -S rubygems
-sudo pacman -S 
+#user can choose if they want to install the packages
+sudo pacman -Sy clang
+sudo pacman -Sy unzip
+sudo pacman -Sy zip
+sudo pacman -Sy ruby
+sudo pacman -Sy php
+sudo pacman -Sy python3
+sudo pacman -Sy gcc
+sudo pacman -Sy man-pages
+sudo pacman -Sy cpanminus
+sudo pacman -Sy npm
+sudo pacman -Sy docker
+sudo pacman -Sy ranger
+sudo pacman -Sy vim
+sudo pacman -Sy iputils
+sudo pacman -Sy net-tools
+sudo pacman -Sy wget
+sudo pacman -Sy iproute2
+sudo pacman -Sy iptables
+sudo pacman -Sy strace
+sudo pacman -Sy rubygems
 fi
 
