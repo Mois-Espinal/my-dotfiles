@@ -13,13 +13,9 @@ alias pacman="sudo pacman"
 alias update='pacman -Syu'
 alias autoremove="pacman -Qtdq | pacman -Rns"
 alias bashconfig="vim ~/.bashrc"
-# List all files colorized in long format, excluding . and ..
+#ls and grep config
 alias la="ls -lAF --color"
-
-# List only directories
 alias lsd="ls -LAF --color | grep --color=never '01;34'"
-
-# Always use color output for `ls`
 alias ls="command ls --color"
 
 alias grep='grep --color=auto'
