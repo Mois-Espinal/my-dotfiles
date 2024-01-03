@@ -11,9 +11,9 @@ git clone https://github.com/Mois-Espinal/my-dotfiles
 ```bash
 source .install
 ```
-### finally we want to install the vim gruvbox theme too, so we need to run another install script
+### finally we want to install the vim gruvbox theme too, so we need to run another install script by going to it's directory
 ```bash
-source .vim-colorinstall
+cd .vim/colors
 ```
 ### then we run the install script
 ```bash
