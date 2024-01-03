@@ -10,9 +10,9 @@ alias l="ls -lF --color"
 alias drive='cd /mnt/c/Users/zorai/Onedrive'
 alias clear-history='echo "" > ~/.bash_history '
 alias pacman="sudo pacman"
-alias open='explorer.exe'
 alias update='pacman -Syu'
 alias autoremove="pacman -Qtdq | pacman -Rns"
+alias bashconfig="vim ~/.bashrc"
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF --color"
 
