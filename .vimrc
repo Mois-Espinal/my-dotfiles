@@ -23,6 +23,11 @@ set ruler
 set shortmess=atI
 " Show the current mode
 set showmode
+"enable folding
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
 "show file name in window title bar
 set title
 "use default line numbers
