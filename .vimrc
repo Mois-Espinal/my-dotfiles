@@ -31,6 +31,7 @@ set title
 set showcmd
 set scrolloff=3
 "very good configuration for me personally
+command Nvimlike vsplit | :Explore
 set spell
 "Plugins
 call plug#begin('~/vimplugins')
