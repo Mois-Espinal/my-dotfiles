@@ -26,10 +26,8 @@ set showmode
 "show file name in window title bar
 set title
 "use default line numbers
-if exists("&number")
         set number
         au BufReadPost * set number
-endif
 set showcmd
 set scrolloff=3
 "very good configuration for me personally
