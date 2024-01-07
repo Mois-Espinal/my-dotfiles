@@ -1,7 +1,7 @@
 " use the Gruvbox dark theme
 set background=dark
 " some basic configurations
-colorscheme gruvbox
+colorscheme embark
 set nocompatible
 set clipboard=unnamed
 set wildmenu
