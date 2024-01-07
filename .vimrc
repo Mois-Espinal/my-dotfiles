@@ -38,6 +38,9 @@ set scrolloff=3
 "very good configuration for me personally
 command Nvimlike vsplit | :Explore
 set spell
+"add some basic mapping
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 "Plugins
 call plug#begin('~/vimplugins')
 "LSP servers
