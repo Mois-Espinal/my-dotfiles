@@ -41,6 +41,14 @@ set spell
 "add some basic mapping
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+"change cursor shape
+  if &term =~ '^xterm'
+    " normal mode
+    let &t_EI .= "\<Esc>[0 q"
+    " insert mode
+    let &t_SI .= "\<Esc>[6 q"
+  endif
+
 "Plugins
 call plug#begin('~/vimplugins')
 "LSP servers
