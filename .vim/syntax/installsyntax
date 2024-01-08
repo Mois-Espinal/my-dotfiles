@@ -1,0 +1,5 @@
+#!/bin/bash
+touch cpp.vim
+touch c.vim
+curl https://raw.githubusercontent.com/bfrg/vim-cpp-modern/master/after/syntax/cpp.vim > cpp.vim
+curl https://raw.githubusercontent.com/bfrg/vim-cpp-modern/master/after/syntax/c.vim > c.vim
