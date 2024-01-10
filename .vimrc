@@ -53,8 +53,6 @@ call plug#begin('~/vimplugins')
 "LSP servers
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-"just for prettiness
-Plug 'itchyny/lightline.vim'
 call plug#end()
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
