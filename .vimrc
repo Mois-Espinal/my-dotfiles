@@ -1,4 +1,4 @@
-" use the Gruvbox dark theme
+" use the Embark dark theme
 set background=dark
 " some basic configurations
 colorscheme embark
