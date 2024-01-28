@@ -14,7 +14,8 @@ cp .hushlogin ~
 cp .vimrc ~
 sudo cp bin/perl-lsp /usr/local/bin
 #installing vim-plug 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #installing cpp man pages
 git clone https://aur.archlinux.org/libstdc++5.git
 cd libstdc++5
