@@ -41,5 +41,6 @@ sudo pacman -Sy iproute2
 sudo pacman -Sy iptables
 sudo pacman -Sy strace
 sudo pacman -Sy gdb
+sudo pacman -Sy tmux
 fi
 
