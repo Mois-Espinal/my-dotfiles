@@ -21,6 +21,8 @@ set noerrorbells
 set nostartofline
 set ruler
 set shortmess=atI
+" edit [RO] files
+set noreadonly
 " Show the current mode
 set showmode
 "enable folding
