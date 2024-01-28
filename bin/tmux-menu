@@ -1,0 +1,26 @@
+#!/bin/node
+const { exec } = require('child_process');
+function Code(){
+const readline = require('node:readline').createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+console.log("Available operations:\n0,Split-Pane Vertical\n1,Split-Pane Horizontal\n2,Switch-Pane\n3,Create new Session")
+readline.question(`What operation would you like to proceed with? `, operation=> {
+  switch(operation){
+  case '3': 
+//TODO make operation to create session
+
+readline.close()
+;break
+  case '2': exec("tmux select-pane -R") ;readline.close();break
+  case '1': exec("tmux split-pane -f") ;readline.close();break
+  case '0': exec("tmux split-pane -h");readline.close();break
+  default:
+  console.log("unknown operation")
+  Code()
+break;                 }
+});
+}
+Code()
