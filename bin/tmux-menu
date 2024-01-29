@@ -1,26 +1,25 @@
-#!/bin/node
-const { exec } = require('child_process');
+#!/bin/bash
 function Code(){
-const readline = require('node:readline').createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-console.log("Available operations:\n0,Split-Pane Vertical\n1,Split-Pane Horizontal\n2,Switch-Pane\n3,Create new Session")
-readline.question(`What operation would you like to proceed with? `, operation=> {
-  switch(operation){
-  case '3': 
-//TODO make operation to create session
-
-readline.close()
-;break
-  case '2': exec("tmux select-pane -R") ;readline.close();break
-  case '1': exec("tmux split-pane -f") ;readline.close();break
-  case '0': exec("tmux split-pane -h");readline.close();break
-  default:
-  console.log("unknown operation")
-  Code()
-break;                 }
-});
+echo -e "\nAvailable operations:\n0,Split-Pane Vertical\n1,Split-Pane Horizontal\n2,Create new Session\n3,Attach to session\n4,Detach from session\n5,List sessions"
+echo -n 'What operation would you like to proceed with? '
+read operation
+case $operation in
+         5)
+                tmux ls                  ;;
+         4)
+  tmux detach;;
+         3)
+echo -n 'What is the session name? '
+read name
+tmux attach -t $name
+                                         ;;
+   2)
+echo -n 'What should be the name? '
+read sessionName
+tmux new -s $sessionName ;;
+   1) tmux split-pane -f;;
+   0) tmux split-pane -h ;;
+   *) echo -n "unknown operation" && Code ;;
+esac
 }
-Code()
+Code
