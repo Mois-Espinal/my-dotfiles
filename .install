@@ -32,14 +32,9 @@ sudo pacman -Sy python3
 sudo pacman -Sy gcc
 sudo pacman -Sy man-pages
 sudo pacman -Sy npm
-sudo pacman -Sy docker
-sudo pacman -Sy ranger
 sudo pacman -Sy vim
-sudo pacman -Sy iputils
 sudo pacman -Sy net-tools
 sudo pacman -Sy wget
-sudo pacman -Sy iproute2
-sudo pacman -Sy iptables
 sudo pacman -Sy strace
 sudo pacman -Sy gdb
 sudo pacman -Sy tmux
