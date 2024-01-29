@@ -9,6 +9,6 @@ git clone https://github.com/Mois-Espinal/my-dotfiles
 ```
 ### Then cd into the repository and run the following command
 ```bash
-make Makefile
+source .install
 ```
-### And there you go. My dotfiles are installed
+### And there you go. My dotfiles are installed on your machine😁
