@@ -18,3 +18,6 @@ git clone https://github.com/Mois-Espinal/my-dotfiles
 source .install
 ```
 ### And there you go. My dotfiles are installed on your machine😁
+## **EXTRA**
+
+# Normally on a normal linux computer I would install ranger but thats optional
