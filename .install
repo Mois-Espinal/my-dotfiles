@@ -6,13 +6,14 @@ read -p "$1 (y/n)" response
 }
 if ask "Do you wish to install?"; then
 sudo rm ~/.bashrc
-cp .bashrc ~
-cp .aliases ~
-cp .bash_profile ~
-cp .config ~
-cp .hushlogin ~
-cp .vimrc ~
-sudo cp bin/perl-lsp /usr/local/bin
+mv .bashrc ~
+mv .aliases ~
+mv .bash_profile ~
+mv .config ~
+mv .hushlogin ~
+mv .vimrc ~
+sudo mv bin/tmux-menu /usr/local/bin
+sudo mv bin/perl-lsp /usr/local/bin
 #installing vim-plug 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
