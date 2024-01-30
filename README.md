@@ -15,9 +15,12 @@ git clone https://github.com/Mois-Espinal/my-dotfiles
 ```
 ## Then move into the repository and run the following command
 ```bash
-source .install
+make
 ```
 ### And there you go. My dotfiles are installed😁
 ## **EXTRA**
 
-### Normally on a normal linux computer I would install ranger but thats optional
+### Normally on a linux computer I would install the following programs
+- ranger
+- vlc
+## but that is optional
