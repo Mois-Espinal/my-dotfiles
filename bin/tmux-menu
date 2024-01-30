@@ -1,9 +1,21 @@
 #!/bin/bash
 function Code(){
-echo -e "\nAvailable operations:\n0,Split-Pane Vertical\n1,Split-Pane Horizontal\n2,Create new Session\n3,Attach to session\n4,Detach from session\n5,List sessions"
+echo -e "\nAvailable operations:\n0,Split-Pane Vertical\n1,Split-Pane Horizontal\n2,Create new Session\n3,Attach to session\n4,Detach from session\n5,List sessions\n6,Select pane\n7,Create new window\n8,Select window"
 echo -n 'What operation would you like to proceed with? '
 read operation
 case $operation in
+         8)
+                                echo -n "What is the window number "
+                        read num
+                                tmux select-window -t $num
+                                                 ;;
+         7)
+                        tmux neww                ;;
+         6)
+                echo -n "What is the pane number "
+                read num
+                        tmux select-pane -t $num
+                                         ;;
          5)
                 tmux ls                  ;;
          4)
@@ -19,7 +31,8 @@ read sessionName
 tmux new -s $sessionName ;;
    1) tmux split-pane -f;;
    0) tmux split-pane -h ;;
-   *) echo -n "unknown operation" && Code ;;
+   *) echo -n "unknown operation"
+                                         Code ;;
 esac
 }
 Code
