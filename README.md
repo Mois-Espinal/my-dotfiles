@@ -18,9 +18,9 @@ git clone https://github.com/Mois-Espinal/my-dotfiles
 make
 ```
 ### And there you go. My dotfiles are installed😁
-## **EXTRA**
+# **EXTRA**
 
-### Normally on a linux computer I would install the following programs
+## Normally on a linux computer I would install the following programs
 - ranger
 - vlc
-## but that is optional
+### but that is optional
