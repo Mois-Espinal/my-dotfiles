@@ -13,8 +13,9 @@
 ```bash
 git clone https://github.com/Mois-Espinal/my-dotfiles
 ```
-## Then move into the repository and run the following command
+## Then move into the repository and run the following commands
 ```bash
+chmod +x .install
 make
 ```
 ### And there you go. My dotfiles are installed😁
