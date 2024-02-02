@@ -2,10 +2,13 @@
 echo "the installation will require sudo acess"
 ask(){
 read -p "$1 (y/n)" response
-[ -z "$response"] || [ "$response" = "y"]
+if[$response -eq "y"]; then
+return 1
+fi
 }
 if ask "Do you wish to install?"; then
 sudo rm ~/.bashrc
+sudo rm ~/.config
 mv .bashrc ~
 mv .aliases ~
 mv .bash_profile ~
@@ -26,6 +29,7 @@ cd syntax
 source installsyntax
 cd ..
 cd ..
+mv .vim ~
 #installing cpp man pages
 git clone https://aur.archlinux.org/libstdc++5.git
 cd libstdc++5
